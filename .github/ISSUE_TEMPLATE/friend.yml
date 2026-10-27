@@ -1,0 +1,74 @@
+name: 申请友链
+description: 提交网站资料，申请加入 Cyberl Blog 的伙伴页面
+title: "[友链申请] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你申请友链。申请会经过人工审核；如资料不完整，维护者可能请你补充信息。提交不代表自动通过，也不承诺固定审核时间。
+
+  - type: input
+    id: site-name
+    attributes:
+      label: 站点名称
+      description: 将在伙伴页面公开显示的名称。
+      placeholder: 例如：我的个人博客
+    validations:
+      required: true
+
+  - type: input
+    id: site-url
+    attributes:
+      label: 站点 URL
+      description: 请填写完整的 HTTPS 地址。
+      placeholder: https://example.com/
+    validations:
+      required: true
+
+  - type: textarea
+    id: site-description
+    attributes:
+      label: 站点简介
+      description: 请用一两句话介绍站点内容。
+      placeholder: 分享技术、生活与创作记录。
+    validations:
+      required: true
+
+  - type: input
+    id: site-image
+    attributes:
+      label: 头像或站点图片 URL
+      description: 请提供可公开访问的完整 HTTPS 地址；审核后可能转换并保存为本地 WebP，不保证直接热链。
+      placeholder: https://example.com/avatar.png
+    validations:
+      required: true
+
+  - type: input
+    id: friend-page-url
+    attributes:
+      label: 对方友链页面 URL
+      description: 请提供包含本站友链或计划用于互链的页面地址。
+      placeholder: https://example.com/friends/
+    validations:
+      required: true
+
+  - type: input
+    id: feed-url
+    attributes:
+      label: RSS/Atom Feed URL（选填）
+      description: 如有订阅源，可填写完整 URL。
+      placeholder: https://example.com/atom.xml
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 补充说明（选填）
+      description: 可补充站点特点、互链状态或其他与审核有关的信息；请勿提交私人联系方式、凭据或后台信息。
+
+  - type: checkboxes
+    id: public-and-authorized
+    attributes:
+      label: 公开展示与图片授权确认
+      options:
+        - label: 我确认上述资料可以公开展示，并且我有权提供所填写的图片供友链展示使用。
+          required: true
